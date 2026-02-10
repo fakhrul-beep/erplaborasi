@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useAuthStore } from '../store/authStore';
+import Logo from '../components/Logo';
 import { LayoutDashboard, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -72,15 +73,13 @@ export default function Login() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
-          <div className="bg-primary p-3 rounded-lg">
-            <LayoutDashboard className="h-8 w-8 text-white" />
-          </div>
+          <Logo className="h-20 w-auto" />
         </div>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           {isSignUp ? 'Create an account' : 'Sign in to your account'}
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Kitchenware ERP System
+          ERP Laborasi
         </p>
       </div>
 
